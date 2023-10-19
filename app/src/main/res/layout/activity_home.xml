@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        style="@style/ButtonGreen"
+        android:layout_width="57dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/ic_baseline_logout_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCollection"
+        style="@style/ButtonGreen"
+        android:layout_width="57dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/ic_baseline_contact_page_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_logout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_transparent"
+        android:layout_width="283dp"
+        android:layout_height="246dp"
+        android:src="@drawable/logo_transparent"
+        app:layout_constraintBottom_toTopOf="@+id/mainJob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.532" />
+
+    <ImageButton
+        android:id="@+id/calendar_btn"
+        android:layout_width="45dp"
+        android:layout_height="47dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_calendar_month_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPunchIn"
+        style="@style/ButtonGreen"
+        android:layout_width="144dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="424dp"
+        android:text="@string/punch_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPause"
+        style="@style/ButtonGreen"
+        android:layout_width="144dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:visibility="gone"
+        android:layout_marginTop="424dp"
+        android:text="@string/pause"
+        app:layout_constraintEnd_toStartOf="@+id/btnPunchOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPunchOut"
+        style="@style/ButtonGreen"
+        android:visibility="gone"
+        android:layout_width="144dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="424dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/punch_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPause"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvElapsedTime"
+        style="@style/SubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/elapsed_time"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPause" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvPausedTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/paused_time"
+        android:textAlignment="center"
+        style="@style/SubTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvElapsedTime" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/materials_used"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:hint="@string/materials_used"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_btn"
+        app:startIconDrawable="@drawable/ic_baseline_library_books_24">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/materials_used_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputEditText"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tools_used"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/tools_used"
+        style="@style/TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materials_used"
+        app:startIconDrawable="@drawable/ic_baseline_construction_24">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tools_used_text"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/mainJob"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_btn"
+        android:dropDownVerticalOffset="50dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_text_field"
+        android:orientation="horizontal"
+        android:focusable="false"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="@+id/mainJob"
+        tools:layout_editor_absoluteX="20dp">
+
+        <ImageView
+            android:id="@+id/glavniPosao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_engineering_24" />
+
+        <TextView
+            android:id="@+id/mainJob_label"
+            style="@style/Spinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/job_type"
+            app:layout_constraintBottom_toBottomOf="@+id/mainJob"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/glavniPosao" />
+
+    </LinearLayout>
+
+
+    <Spinner
+        android:id="@+id/jobs_second"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainJob" />
+    >
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_text_field"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/jobs_second"
+        tools:layout_editor_absoluteX="20dp">
+
+        <ImageView
+            android:id="@+id/podPosao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_precision_manufacturing_24" />
+
+        <TextView
+            android:focusable="false"
+            android:clickable="false"
+            android:id="@+id/labe_pod_posao"
+            style="@style/Spinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/choose_job"
+            app:layout_constraintBottom_toBottomOf="@+id/jobs_second"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/podPosao" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

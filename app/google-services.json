@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "115835998602",
+    "project_id": "worktrackr-8eaf7",
+    "storage_bucket": "worktrackr-8eaf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115835998602:android:c10e3b401b997bf57d3873",
+        "android_client_info": {
+          "package_name": "com.example.radninalog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrMqZT_4g3rdu5wPRC07Vb2X_28wen6mU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
